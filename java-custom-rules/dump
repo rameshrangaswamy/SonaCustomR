@@ -1,0 +1,49 @@
+C:\Program Files (x86)\Common Files\Oracle\Java\javapath
+
+SonarDemo: 90257bd6b8ad5ddadd5110281f820c546341f1a4
+
+mvn sonar:sonar \
+  -Dsonar.host.url=http://localhost:9000 \
+  -Dsonar.login=90257bd6b8ad5ddadd5110281f820c546341f1a4
+  
+  AvoidTooManyParametersForMethodCheck.java
+  
+  @Rule(key = "AvoidTooManyParametersForMethodRule", description = "Method should not have more than 5 parameters", priority = Priority.MAJOR,
+tags = {"bug"} )
+
+
+
+
+ WORKSPACE :: /home/rameshrangaswamy1/workspace/environments
+ 
+ 
+ $WORKSPACE/${packageName}/target/*-SNAPSHOT.*ar
+ 
+ sshpass -p $dummy ssh rameshrangaswamy1@34.93.202.223 "~/apache-tomcat-8.5.42/bin/startup.sh"
+ 
+ /home/rameshrangaswamy1/apache-tomcat-8.5.42/bin/startup.sh
+ 
+ 
+ 
+ 
+ 
+
+withCredentials([usernamePassword(credentialsId: "sashank", usernameVariable: 'USER', passwordVariable: 'PASS')])
+				{
+					def auth_key = "${USER}:${PASS}"
+					def auth_encoded = auth_key.bytes.encodeBase64().toString()
+					response = httpRequest consoleLogResponseBody: true,
+						customHeaders: [[name: 'Authorization', value: "Basic ${auth_encoded}"]],
+                httpMode: 'POST', requestBody: payload,
+url: "https://github.com/api/v4/repos/${ghprbGhRepository}/statuses/${commitId}"
+
+withCredentials([usernamePassword(credentialsId: "sashank", usernameVariable: 'USER', passwordVariable: 'PASS')])
+				{
+					def auth_key = "${USER}:${PASS}"
+					def auth_encoded = auth_key.bytes.encodeBase64().toString()
+					response = httpRequest consoleLogResponseBody: true,
+						customHeaders: [[name: 'Authorization', value: "Basic ${auth_encoded}"]],
+						httpMode: 'GET',
+						url: "https://github.com/CJPtestingpipeline/statuses/166/comments"
+
+				}
